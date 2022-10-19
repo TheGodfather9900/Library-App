@@ -1,0 +1,232 @@
+:root {
+    /* COLOR VARIABLES */
+    --primary-color: #88d9e6;
+    --secondary-color: #c5fffd;
+    --background-color: #fafdf6;
+    --heading-text-color: rgb(82, 82, 82);
+    --main-text-color: rgb(111, 111, 111);
+    --read-book-color: rgb(107, 217, 107);
+    --unread-book-color: rgb(255, 122, 122);
+
+    /* FONT SIZE VARIABLES */
+    --font-size-xs: 12px;
+    --font-size-s: 16px;
+    --font-size-m: 18px;
+    --font-size-l: 20px;
+    --font-size-xl: 24px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER ELEMENTS STYLES */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    background-color: var(--primary-color);
+    color: var(--heading-text-color);
+    font-size: var(--font-size-xl);
+}
+h2 {
+    margin: 15px 0;
+}
+span {
+    font-size: var(--font-size-l);
+}
+.rules {
+    cursor: pointer;
+}
+.rules .info {
+    visibility: hidden;
+    background-color: var(--main-text-color);
+    color: var(--secondary-color);
+    font-style: italic;
+    max-width: 260px;
+    font-size: var(--font-size-s);
+    position: absolute;
+    right: 10%;
+    top: 0;
+    border-radius: 5px;
+    padding: 20px;
+}
+.rules:hover .info {
+    visibility: visible;
+}
+
+/* FORM SECTION STYLES */
+.edit {
+    left: 0;
+    top: 0;
+    z-index: 999;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(4px);
+}
+form {
+    margin: 20% auto;
+    width: 350px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px 0;
+    height: 365px;
+    justify-content: space-evenly;
+    font-size: var(--font-size-m);
+    color: var(--heading-text-color);
+    font-weight: 400;
+}
+form div:first-child {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 5px;
+}
+legend {
+    margin-bottom: 10px;
+    font-size: var(--font-size-l);
+}
+.cancel {
+    border: none;
+    background-color: transparent;
+    align-self: flex-end;
+    margin: -15px 10px 32px 0;
+    padding: 0;
+}
+form>div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+form div:nth-child(5){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+input {
+    width: 250px;
+    height: 20px;
+}
+input::placeholder {
+    font-style: italic;
+}
+#status {
+    width: 20px;
+}
+.add {
+    width: 120px;
+    height: 30px;
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: var(--heading-text-color);
+}
+.add:hover {
+    opacity: 0.9;
+}
+
+/* LIBRARY SECTION STYLES */
+.library {
+    display: flex;
+    flex-direction: column;
+    background: var(--background-color);
+    align-items: center;
+    flex: 1;
+    overflow: auto;
+    justify-content: space-between;
+    gap: 40px;
+}
+.bookList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+.bookEntry {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    border: 5px solid var(--primary-color);
+    background: var(--secondary-color);
+    padding: 10px;
+    color: var(--main-text-color);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.6);
+}
+.bookEntry p:first-child {
+    font-size: var(--font-size-m);
+    font-weight: bold;
+}
+.bookEntry > p {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: var(--font-size-m);
+}
+.buttons {
+    align-self: center;
+    margin-bottom: 10px;
+}
+.buttons :last-child {
+    background-color: var(--background-color);
+}
+.buttons > button {
+    border: none;
+    border-radius: 15px;
+    width: 80px;
+    height: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.buttons > button:hover{
+    opacity: 0.9;
+}
+.read {
+    background-color: var(--read-book-color);
+}
+.notread {
+    background-color: var(--unread-book-color);
+}
+
+/* FOOTER SECTION STYLES */
+footer {
+    color: black;
+    font-size: var(--font-size-xs);
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+img {
+    height: 18px;
+    width: 18px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+/* BUTTON ELEMENTS GENERAL STYLE */
+button {
+    cursor: pointer;
+    color: var(--heading-text-color);
+}

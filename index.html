@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Library</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <div class="rules">
+            <h2>Library App</h2>
+            <p class="info">
+                The Odin Project
+            </p>
+        </div>
+        
+        <button class="add"><span>+</span> New Book</button>
+    </div>
+    
+    <div class="library">
+        <div class="bookList"></div>
+        <footer>
+            <p>Copyright &copy; The Godfather</p>
+            <a href="https://github.com/TheGodfather9900 target="_blank"><img src="./images/github-symbol.svg" alt=""></a>
+        </footer>
+    </div>
+
+    <div class="edit" hidden>
+        <form action="">
+            
+            
+            <div>
+                <legend>Add a new book</legend>
+                <button class="cancel"><span class="material-icons close-form"> close </span></button>
+            </div>
+
+            <div>
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="book title" required>
+            </div>
+            
+            <div>
+                <label for="author">Author</label>
+                <input type="text" id="author" placeholder="book author" required>
+            </div>
+    
+            <div>
+                <label for="pages">Number of pages</label>
+                <input type="number" id="pages" placeholder="# of pages" required>
+            </div>
+    
+            <div>
+                <label for="status">Did you read this book?</label>
+                <input type="checkbox" id="status">
+            </div>
+    
+            <input type="submit" class="add book" value="Add Book">
+        </form>
+    </div>
+
+    
+    
+</body>
+</html>
